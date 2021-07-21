@@ -488,9 +488,9 @@ void testFunc019(void){
         }
     }
 #endif
-#if 1
+#if 0
     for(auto iter = root.begin() ; iter != root.end() ; iter++){
-        cout << "key:" << *iter << endl;
+        cout << "key:" << iter-> << endl;
     }
 #endif
 #if 0

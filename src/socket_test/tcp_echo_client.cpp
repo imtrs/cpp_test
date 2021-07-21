@@ -67,7 +67,7 @@ int main(int argc, char * argv[]){
         } 
 
         totalBytesRcvd += bytesRcvd; 
-        echoBuffer[bytesRcvd] = ''; 
+        echoBuffer[bytesRcvd] = '\0'; 
         printf(echoBuffer); 
 
     } 
@@ -75,6 +75,5 @@ int main(int argc, char * argv[]){
     printf(" "); 
 
     close(sock); 
-
     exit(0); 
 } 

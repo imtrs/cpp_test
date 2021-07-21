@@ -48,19 +48,19 @@ SET( TCP_ECO_SERVER
 )
 
 SET(CPP_TCP_ECHO_SERVER_SRC_FILES
-    src/socket_test/tcp_echo_server.c
-    src/socket_test/tcp_echo_server_thread.c
+    src/socket_test/tcp_echo_server.cpp
+    src/socket_test/tcp_echo_server_thread.cpp
 )    
 
 SET (CPP_TCP_ECHO_CLIENT_SRC_FILES 
-    src/socket_test/tcp_echo_client.c
+    src/socket_test/tcp_echo_client.cpp
 )
 
-ADD_EXECUTABLE( ${TCP_ECO_SERVER} 
+ADD_EXECUTABLE( tcp_echo_server
     ${CPP_TCP_ECHO_SERVER_SRC_FILES}
 ) 
 
-TARGET_INCLUDE_DIRECTORIES( ${TCP_ECO_SERVER} 
+TARGET_INCLUDE_DIRECTORIES( tcp_echo_server PUBLIC 
     include/socket_test/
 )
 

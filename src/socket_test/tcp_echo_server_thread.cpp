@@ -1,3 +1,6 @@
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 #include <tcp_echo_server.h>
 #include <pthread.h> // for POSIX threads  
 
@@ -7,6 +10,11 @@ void * ThreadMain(void * arg); // Main program of a thread
 struct ThreadArgs { 
     int clntSock; 
 }; 
+
+void DieWithError(char *err){
+    perror(err);
+    exit(1);
+} 
  
 int main(int argc, char * argv[]) { 
     int servSock; 
